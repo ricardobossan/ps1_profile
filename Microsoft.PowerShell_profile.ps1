@@ -29,7 +29,7 @@
 
   function Gh-GetPRic {
     $username=Get-GitHubUsername
-      gh pr list -L 5000 -A $username $args
+      gh pr list -L 5000 -A "@me" $args
   }
 
   function Install-Jq {
@@ -57,6 +57,23 @@
 # Call 'gh pr list' for the authenticated user
       gh pr list -A  $username
   }
+
+  function Gh-GetIssueAll {
+      gh issue list -L 5000 $args
+  }
+
+  function Gh-GetIssueAccessibilityAll {
+      gh issue list -L 5000 -l tenet-accessibility $args
+  }
+
+    function Gh-GetIssueAccessibilityRelated {
+      gh issue list -L 5000 -S accesibilty $args
+  }
+
+    function Gh-GetIssueByNumber {
+      gh issue $args
+    }
+
 ##}}}
 
 # }}}
@@ -71,8 +88,11 @@
 # }}}
 
 # GitHub CLI Aliases {{{
-  New-Alias gprl Gh-GetPRic
+    New-Alias gprl Gh-GetPRic
     New-Alias gpr Gh-GetPR
+    New-Alias gia Gh-GetIssueAccessibilityAll
+    New-Alias gira Gh-GetIssueAccessibilityRelated
+    New-Alias gin Gh-GetIssueByNumber
 # }}}
 
 # }}}
