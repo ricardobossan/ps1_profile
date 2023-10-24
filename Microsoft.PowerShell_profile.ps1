@@ -66,13 +66,13 @@
       gh issue list -L 5000 -l tenet-accessibility $args
   }
 
-    function Gh-GetIssueAccessibilityRelated {
-      gh issue list -L 5000 -S accesibilty $args
+  function Gh-GetIssueAccessibilityRelated {
+      gh issue list -L 5000 -S accessibility $args
   }
 
-    function Gh-GetIssueByNumber {
-      gh issue $args
-    }
+  function Gh-GetIssueByNumber {
+      gh issue view $args
+  }
 
 ##}}}
 
