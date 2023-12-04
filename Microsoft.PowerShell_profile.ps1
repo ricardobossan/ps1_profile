@@ -16,6 +16,10 @@
   function Get-GitDiff {
     git diff -w $args
   }
+  
+  function Get-GitFetchAll {
+    git fetch --all
+  }
 ##}}}
 
 ## GitHub CLI Functions {{{
@@ -87,6 +91,7 @@ Install-Jq
   New-Alias ggs Get-GitStatus
   New-Alias gga Get-GitAddAll
   New-Alias ggd Get-GitDiff
+  New-Alias gfa Get-GitFetchAll
 # }}}
 
 # GitHub CLI Aliases {{{
