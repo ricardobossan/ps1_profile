@@ -1,5 +1,11 @@
 # Functions {{{
 
+## General {{{
+  function Restore-Start {
+    .\Restore.cmd;.\start-vs.cmd
+  }
+##}}}
+
 ## Git Functions {{{
   function Get-GitLog {
     git log --all --oneline --graph --decorate $args
@@ -85,6 +91,10 @@
 Install-Jq
 
 # Aliases {{{
+
+## General {{{
+New-Alias rs Restore-Start
+##}}}
 
 # Git Aliases {{{
   New-Alias ggl Get-GitLog
